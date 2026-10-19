@@ -1,6 +1,6 @@
 # Privacy Policy — Cristina's Broom
 
-**Last updated: 3 September 2026**
+**Last updated: 19 October 2026**
 
 This policy covers the Android game **Cristina's Broom** (package
 `io.github.muresania.skyward`), referred to below as "the game".
@@ -14,13 +14,13 @@ that the two cannot drift apart.
 ## The short version
 
 - **We collect nothing.** The game has no account, no sign-in, no analytics and no crash
-reporter, and it sends nothing to any server we control. We do not operate a server.
+  reporter, and it sends nothing to any server we control. We do not operate a server.
 - **Your progress stays on your device**, in the game's own private storage.
 - **The game shows optional rewarded video adverts**, supplied by Google's Mobile Ads
-SDK. Google collects some data when an advert is requested or shown. That is the only
-data that leaves your device because of the game, and it is described in full below.
+  SDK. Google collects some data when an advert is requested or shown. That is the only
+  data that leaves your device because of the game, and it is described in full below.
 - **The game is treated as child-directed.** Adverts are non-personalised, and the
-Android advertising identifier is not transmitted.
+  Android advertising identifier is not transmitted.
 - **Watching an advert is always optional.** Nothing in the game is locked behind one.
 
 ---
@@ -31,19 +31,28 @@ The game saves your progress and settings in its own private storage
 (`files/datastore/skyward.preferences_pb`). No other app can read it. It is never
 transmitted to us, and we could not read it if we wanted to.
 
-That file holds eleven values, and this is all of them:
+That file holds sixteen values, and this is all of them:
 
 | What | Why |
 |---|---|
 | Best score | To show your record |
+| Your ten best runs: each a score and the date you played it, on your phone's own calendar | To show the Best runs list |
 | Coin balance | The in-game currency, earned by playing |
 | Owned cosmetic items | So purchases persist |
 | Equipped hat, broom, cape and familiar | So your chosen look persists |
-| Reduced motion, haptics, sound effects, ambience | Your four settings toggles |
+| The last day a daily goal was paid, and the last week a weekly goal was paid | So a goal pays once |
+| Reduced motion, haptics, sound effects, ambience, music and high contrast | Your six settings toggles |
 
 **None of it identifies you.** There is no name, no email address, no account, no device
 identifier and nothing derived from one. Nothing stored can tell one player from another
-except by how good they are at the game.
+except by how good they are at the game. The dates stored with your best runs and goals are
+dates on your own device, and they are never sent anywhere.
+
+### Sharing a score
+
+The game's Share button opens your phone's own share menu with one fixed sentence: your score
+and a link to the game's store page. Nothing is sent unless you pick an app and send it
+yourself, and the game never learns where it went. The text contains nothing about you.
 
 **Coins cannot be bought.** They are earned by playing and there is no purchase path, so
 the game holds no payment information of any kind.
@@ -91,9 +100,9 @@ The game is configured as **child-directed** for every player, with no age gate 
 alternative path. That has three consequences, and they apply to everybody:
 
 - **Adverts are non-personalised.** They are not based on your interests or on a profile
-of you.
+  of you.
 - **The Android advertising identifier (AAID) is not transmitted.** The permission that
-would allow it is removed from the app at build time.
+  would allow it is removed from the app at build time.
 - **Remarketing and third-party ad vendors are disabled.**
 
 We chose this knowing it earns less. Non-personalised adverts pay materially lower rates.
@@ -119,6 +128,7 @@ Per Google's documentation, it is reset when any of the following happens:
 | `INTERNET` | Required by the Mobile Ads SDK to request adverts. The game makes no network requests of its own |
 | `VIBRATE` | A short buzz when a run ends. Can be turned off in Settings |
 | `ACCESS_NETWORK_STATE`, `WAKE_LOCK`, `FOREGROUND_SERVICE` | Added automatically by Google's advert libraries. Not requested by us and not used by the game |
+| `CHECK_LICENSE` | Added by Google Play to the copy it delivers, as part of Play's app protection, to check with the Play Store app that the game was installed from Google Play. Not in the game's own code, and it gives the game no information about you |
 
 The game does **not** request access to your location, camera, microphone, contacts,
 photos, files, or any other personal data on your device. It has no permission to do so.
@@ -139,9 +149,9 @@ request to process.
 You can act on it directly:
 
 - **Reset the App Set ID** by uninstalling the game — if it is the only app of ours on
-the device, that resets the identifier, as described above.
+  the device, that resets the identifier, as described above.
 - **Google's own controls** at [myaccount.google.com](https://myaccount.google.com) cover
-the data Google holds, including activity and advert settings.
+  the data Google holds, including activity and advert settings.
 - **Delete your backup** from your Google account if you have used Android Auto Backup.
 
 ---
